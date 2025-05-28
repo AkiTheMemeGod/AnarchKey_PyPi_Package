@@ -3,12 +3,12 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "warborne"
+name = "AnarchKeyClient"
 version = "1.0.0"
 authors = [
   { name = "AkiTheMemeGod", email = "k.akashkumar@gmail.com" },
 ]
-description = "A simple hashing library based on vowel counting"
+description = "A Client package to connect and retrieve api keys from vault serivce called AnarchKey"
 readme = "README.md"
 requires-python = ">=3.7"
 classifiers = [
@@ -18,8 +18,8 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/AkiTheMemeGod/Warborne_pypi_package"
-"Bug Tracker" = "https://github.com/AkiTheMemeGod/Warborne_pypi_package/issues"
+"Homepage" = "https://github.com/AkiTheMemeGod/AnarchKey_PyPi_Package"
+"Bug Tracker" = "https://github.com/AkiTheMemeGod/AnarchKey_PyPi_Package/issues"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
