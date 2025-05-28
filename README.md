@@ -1,26 +1,30 @@
-# WarBorne
+# AnarchKey Client
 
-A simple hashing library that generates hashes based on vowel counting.
+A Python client library for connecting to and retrieving API keys from the AnarchKey vault service.
+## Description
+AnarchKeyClient provides a simple interface to securely retrieve API keys stored in the AnarchKey vault service. This package helps developers manage API credentials for their projects without hardcoding sensitive information in their codebase.
 
 ## Installation
 ```bash
-pip install warborne
+pip install AnarchKeyClient
 ```
 ## Usage
 
 ```python
-from warborne import WarBorne
+from AnarchKeyClient import AnarchKeyClient
 
-# Create a WarBorne instance
-wb = WarBorne()
+# Initialize the client with your username and AnarchKey API key
+client = AnarchKeyClient(username="YourUsername", api_key="YourAnarchKeyAPIKey")
 
-# Hash a string
-hash_value = wb.hash("Hello, World!")
-print(hash_value)
+# Retrieve an API key for a specific project
+response = client.get_api_key(project_name="YourProjectName")
 
-# Hash a file
-file_hash = wb.hash_file("path/to/file.txt")
-print(file_hash)
+# Check if request was successful
+if response["success"]:
+    api_key = response["key"]
+    print(f"Retrieved API key: {api_key}")
+else:
+    print(f"Error: {response['message']}")
 ```
 
 ## License MIT
