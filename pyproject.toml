@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "AnarchKeyClient"
-version = "1.0.0"
+version = "2.0.0"
 authors = [
   { name = "AkiTheMemeGod", email = "k.akashkumar@gmail.com" },
 ]
@@ -17,9 +17,16 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 
+dependencies = [
+  "requests>=2.31.0,<4.0.0"
+]
+
 [project.urls]
 "Homepage" = "https://github.com/AkiTheMemeGod/AnarchKey_PyPi_Package"
 "Bug Tracker" = "https://github.com/AkiTheMemeGod/AnarchKey_PyPi_Package/issues"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
+
+[project.scripts]
+anarchkey = "AnarchKeyClient:main"
